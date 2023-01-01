@@ -123,7 +123,7 @@ function processImages($page) {
 
         download($imageSrc, BUILD_DIR . '/images/'.$imgName);
 
-        $imageSrc = str_replace('http://learnyousomeerlang.com/static/img', '../images', $imageSrc);
+        $imageSrc = str_replace('https://learnyousomeerlang.com/static/img', '../images', $imageSrc);
         $img->setAttribute('src', $imageSrc);
 
         if ($img->getAttribute('class') == '')
@@ -173,7 +173,7 @@ function removeNavigation($dom2) {
 
 function prepareHref($link) {
     $href = $link->getAttribute('href');
-    $href = str_replace('http://learnyousomeerlang.com/', '', $href);
+    $href = str_replace('https://learnyousomeerlang.com/', '', $href);
 
     if (contains($href, '#')) {
         if (!starts($href, '#')) {
@@ -385,7 +385,7 @@ function addOwnPages($pages) {
 function main() {
     createBuildDirs();
 
-    $pages = extractPages('http://learnyousomeerlang.com/content');
+    $pages = extractPages('https://learnyousomeerlang.com/content');
 
     downloadPages($pages);
     buildTocNcx($pages);
