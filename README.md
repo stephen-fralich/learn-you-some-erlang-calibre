@@ -13,6 +13,7 @@ the latest content on the website.
 4. Run: `$ make`
 5. Load build/learn-you-some-erlang.mobi on your Kindle device or test it with
 the [Calibre][2].
+6. Run `$ make pdf` to build a PDF file.
 
 Screenshots
 -----------
